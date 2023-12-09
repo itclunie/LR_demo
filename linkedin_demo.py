@@ -47,9 +47,9 @@ st.markdown(f'gender {gender}')
 if st.button('Predict'):
 	pre_pred = pd.DataFrame({ 'age':[age],   'marital':[marital],   'par':[parent],   'educ2':[edu],   'income':[income],   'female':[gender]  })
 	user_prob = model.predict_proba(pre_pred)
-	user_prob = round( user_prob[0], 2 ) * 100
+	user_prob_r = round( user_prob[0][1], 2 ) * 100
 	
-	st.markdown(f'The probability that the entered person uses LinkedIn is {user_prob}%')
+	st.markdown(f'The probability that the entered person uses LinkedIn is {user_prob_r}%')
 	#st.markdown(f'### Prediction is {pred}')
 		
 
