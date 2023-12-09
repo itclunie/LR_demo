@@ -37,12 +37,6 @@ if gender == 'Female':
 else:
 	gender  = 0
 
-st.markdown(f'age {age}')
-st.markdown(f'edu {edu}')
-st.markdown(f'income {income}')
-st.markdown(f'marital {marital}')
-st.markdown(f'parent {parent}')
-st.markdown(f'gender {gender}')
 
 if st.button('Predict'):
 	pre_pred = pd.DataFrame({ 'age':[age],   'marital':[marital],   'par':[parent],   'educ2':[edu],   'income':[income],   'female':[gender]  })
